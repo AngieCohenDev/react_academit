@@ -1,3 +1,4 @@
+import { ArticleContainer } from "./components/ArticleContainer";
 import { Header } from "./components/Header";
 import { MainArticle } from "./components/MainArticle";
 import { NewContainer } from "./components/NewContainer";
@@ -10,6 +11,7 @@ function App() {
         <MainArticle />
         <NewContainer />
       </div>
+      <ArticleContainer />
     </main>
   );
 }

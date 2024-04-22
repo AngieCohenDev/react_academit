@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 export const NewArticle = ({title, text}) => {
   return (
     <article className="h-[140px] border-b-2 border-GrayishBlue py-7 last:border-none">
