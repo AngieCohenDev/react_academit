@@ -5,9 +5,9 @@ import { NewContainer } from "./components/NewContainer";
 
 function App() {
   return (
-    <main className="px-4 pt-6">
+    <main className="px-8 pt-10">
       <Header />
-      <div className="sm:flex sm:gap-8 ">
+      <div className="lg:flex lg:gap-8 ">
         <MainArticle />
         <NewContainer />
       </div>
