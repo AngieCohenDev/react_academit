@@ -27,7 +27,11 @@ export const VideosControl = ({
   toggleFullscreen,
 }) => {
   return (
-    <div className={`absolute bottom-0 left-0 w-full p-4 flex items-center bg-black bg-opacity-75 ${isPlaying ? 'hidden group-hover:flex': ''}`}>
+    <div
+      className={`absolute bottom-0 left-0 w-full p-4 flex items-center bg-black bg-opacity-75 ${
+        isPlaying ? "hidden group-hover:flex" : ""
+      }`}
+    >
       <div className="flex items-center justify-between gap-3 w-full">
         <button className="text-white focus:outline-none" onClick={togglePlay}>
           {isPlaying ? <BsPauseFill size={24} /> : <BsFillPlayFill size={24} />}
