@@ -2,7 +2,7 @@ import { VideoPlayer } from "../components/VideoPlayer"
 import {Header} from '../components/Header'
 import { MenuContainer } from "../components/MenuContainer"
 
-import video from '../assets/videos/video_prueba.mp4'
+import video from '../assets/videos/prueba2.mp4'
 
 
 export const VideosPage = () => {

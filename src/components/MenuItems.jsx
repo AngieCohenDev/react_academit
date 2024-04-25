@@ -4,9 +4,9 @@ import { useState } from "react";
 export const MenuItems = ({title, description}) => {
   const [apertura, setApertura] = useState(false);
   return (
-    <div className=" text-OffWhite py-[28px] px-[20px]" >
+    <div className="  text-OffWhite py-[28px] px-[20px]  border-b-2 border-gray-600 last:border-none" >
       <button
-        className="flex justify-between w-full"
+        className="flex justify-between w-full items-center"
         onClick={() => setApertura(!apertura)}
       >
         <span className="cursor-pointer hover:text-SoftOrange text-[20px] mb-3 font-bold lg:text-[16px] xl:text-[20px]" >{title}</span>
