@@ -2,19 +2,19 @@ import { NewArticle } from "./NewArticle";
 
 export const NewContainer = () => {
   return (
-    <aside className="bg-VeryDarkBlue text-OffWhite py-[28px] px-[20px]">
-      <h1 className="text-SoftOrange text-4xl font-bold">New</h1>
+    <aside className="bg-VeryDarkBlue text-OffWhite py-[28px] px-[20px] ">
+      <h1 className="text-SoftOrange text-4xl font-bold">Próximos cursos</h1>
       <NewArticle
-        title="Hydrogen VS Electric Cars"
-        text="Will hydrogen-fueled cars ever catch up to EVs?"
+        title="Curso de JavaScript"
+        text="Aprende el lenguaje líder en el desarrollo web interactivo; una herrmanienta poderosa que impulsa el avance tecnológico."
       />
       <NewArticle
-        title="The Downsides of AI Artistry"
-        text="What are the possible adverse effects of on-demand AI image generation?"
+        title="Curso de Diseño UX/UI"
+        text="Crea productos digitales atractivos, fáciles de usar y que ofrezcan una experiencia satisfactoria a los usuarios."
       />
       <NewArticle
-        title="Is VC Funding Drying Up?"
-        text="Private funding by VC firms is down 50% YOY. We take a look at what that means."
+        title="Curso Full-Stack: Back-end y Front-end"
+        text="Amplía tus oportunidades laborales al convertirte en un experto a nivel Front-end y Back-end. ¡Obtén habilidades excepcionales!  "
       />
     </aside>
   );

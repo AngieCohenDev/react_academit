@@ -1,18 +1,17 @@
-import { ArticleContainer } from "./components/ArticleContainer";
-import { Header } from "./components/Header";
-import { MainArticle } from "./components/MainArticle";
-import { NewContainer } from "./components/NewContainer";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { LandingPage } from './pages/LandingPage';
+import { VideosPage } from './pages/VideosPage';
+
+
 
 function App() {
   return (
-    <main className="px-8 pt-10">
-      <Header />
-      <div className="lg:flex lg:gap-8 ">
-        <MainArticle />
-        <NewContainer />
-      </div>
-      <ArticleContainer />
-    </main>
+    <BrowserRouter>
+      <Routes >
+        <Route path="/" element={<LandingPage/>} />
+        <Route path='/video' element={<VideosPage/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
