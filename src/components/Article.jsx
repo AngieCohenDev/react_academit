@@ -6,10 +6,10 @@ export const Article = ({ img, number, title, text }) => {
         <img src={img} alt="" />
       </div>
       <div className="pl-6">
-        <p className="text-GrayishBlue text-3xl mb-[18px] font-bold">
+        <p className="text-GrayishBlue text-3xl mb-[16px] font-bold">
           {number}
         </p>
-        <h2 className="font-bold mb-[18px] hover:text-SoftOrange cursor-pointer">
+        <h2 className="font-bold mb-[16px] hover:text-SoftOrange cursor-pointer">
           {title}
         </h2>
         <p className="text-DarkGrayishBlue">{text}</p>
