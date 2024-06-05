@@ -4,9 +4,9 @@ import { useFetchMainArticles } from "../hooks/useFetchMainArticle";
 
 export const MainArticle = () => {
   const { mainArticle, isLoading } = useFetchMainArticles()
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
   return (
     <section className="mb-12">
       <picture>
@@ -17,15 +17,15 @@ export const MainArticle = () => {
       <div className="sm:flex">
         <div className="flex-1 py-6">
           <h2 className="text-[40px] font-bold sm:text-[58px] leading-none ">
-            {mainArticle[0]?.title}
+            {!isLoading ? mainArticle[0]?.title : '!Titulo!'}
           </h2>
         </div>
         <div className="flex-1 pt-9">
           <p className="text-[13px] mb-10 px-1 sm:text-[15px]">
-            {mainArticle[0]?.description}
+            {!isLoading ? mainArticle[0]?.description : 'adsfasf'}
           </p>
           <button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
-            {mainArticle[0]?.textButton}
+            {!isLoading ? mainArticle[0]?.textButton : 'asdfasd'}
           </button>
         </div>
       </div>
