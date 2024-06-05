@@ -1,12 +1,13 @@
 export const getNewArticle = async () => {
-    const url = `http://localhost:8080/articles`
+    const url = `http://localhost:8080/new-article`
     const resp = await fetch( url );
 
     const data = await resp.json();
-    const articles = data.map( article => ({
-        title: article.title,
-        description: article.description
+    const newArticles = data.map( newArticle => ({
+        sectiontitle: newArticle.sectiontitle,
+        articletitle: newArticle.articletitle,
+        description: newArticle.description
     }))
-    console.log(articles);
-    return articles;
+    console.log(newArticles);
+    return newArticles;
 }

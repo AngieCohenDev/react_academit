@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { getNewArticle } from "../helpers/getNewArticle";
 
-export const useFetchArticles = () => {
+export const useFetchNewArticles = () => {
     
-    const [articles, setArticles] = useState([])
+    const [newArticles, setNewArticles] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
     const getArticle = async () => {
         const newArticle = await getNewArticle();
-        setArticles(newArticle);
+        setNewArticles(newArticle);
         setIsLoading(false)
     }
 
@@ -17,7 +17,7 @@ export const useFetchArticles = () => {
     }, []);
 
     return {
-        articles,
+        newArticles,
         isLoading
     }
 }

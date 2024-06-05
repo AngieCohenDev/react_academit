@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../helpers/getArticles";
 
-export const useFetchMainArticles = () => {
+export const useFetchArticles = () => {
     
     const [articles, setArticle] = useState([])
     const [isLoading, setIsLoading] = useState(true)
