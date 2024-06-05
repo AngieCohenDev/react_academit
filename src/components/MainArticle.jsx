@@ -17,15 +17,27 @@ export const MainArticle = () => {
       <div className="sm:flex">
         <div className="flex-1 py-6">
           <h2 className="text-[40px] font-bold sm:text-[58px] leading-none ">
-            {!isLoading ? mainArticle[0]?.title : '!Titulo!'}
+            {
+              isLoading
+              ? '¡Aprende de programación con expertos!'
+              : mainArticle[0]?.title
+            }
           </h2>
         </div>
         <div className="flex-1 pt-9">
           <p className="text-[13px] mb-10 px-1 sm:text-[15px]">
-            {!isLoading ? mainArticle[0]?.description : 'adsfasf'}
+            {
+              isLoading
+              ? 'adsfasf'
+              : mainArticle[0]?.description
+            }
           </p>
           <button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
-            {!isLoading ? mainArticle[0]?.textButton : 'asdfasd'}
+            {
+              isLoading 
+              ? 'asdfasd'
+              : mainArticle[0]?.textButton 
+            }
           </button>
         </div>
       </div>
