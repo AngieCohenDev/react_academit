@@ -12,7 +12,9 @@ export const MainArticle = () => {
       <picture>
         <source media="(max-width: 640px)" srcSet={imagenMobile} />
         <source media="(min-width: 641px)" srcSet={imagenDesktop} />
-        <img src={imagenMobile} alt="Articulo principal imagen" />
+        <img 
+          src={ isLoading ? imagenMobile : mainArticle[0].image }
+          alt="Articulo principal imagen" />
       </picture>
       <div className="sm:flex">
         <div className="flex-1 py-6">
