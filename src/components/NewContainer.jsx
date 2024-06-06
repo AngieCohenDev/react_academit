@@ -8,9 +8,16 @@ export const NewContainer = () => {
     <aside className="bg-VeryDarkBlue text-OffWhite py-[28px] px-[20px] ">
       <h1 className="text-SoftOrange text-4xl font-bold">Próximos cursos</h1>
       {
-        newArticles.map((article) => (
-          <NewArticle title={article.articletitle} text={article.description} />
-        ))
+        isLoading
+          ?
+          <>
+            <NewArticle title={'Name of New Article'} text={'Description of New Article'} />
+            <NewArticle title={'Name of New Article'} text={'Description of New Article'} />
+            <NewArticle title={'Name of New Article'} text={'Description of New Article'} />
+          </>
+          : newArticles.map((article) => (
+            <NewArticle title={article.articletitle} text={article.description} />
+          ))
       }
     </aside>
   );
