@@ -19,8 +19,8 @@ export const MainArticle = () => {
           <h2 className="text-[40px] font-bold sm:text-[58px] leading-none ">
             {
               isLoading
-              ? '¡Aprende de programación con expertos!'
-              : mainArticle[0]?.title
+                ? '¡Aprende de programación con expertos!'
+                : mainArticle[0]?.title
             }
           </h2>
         </div>
@@ -28,15 +28,15 @@ export const MainArticle = () => {
           <p className="text-[13px] mb-10 px-1 sm:text-[15px]">
             {
               isLoading
-              ? 'adsfasf'
-              : mainArticle[0]?.description
+                ? 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.'
+                : mainArticle[0]?.description
             }
           </p>
           <button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
             {
-              isLoading 
-              ? 'asdfasd'
-              : mainArticle[0]?.textButton 
+              isLoading
+                ? 'Inscribirse'
+                : mainArticle[0]?.textButton
             }
           </button>
         </div>
