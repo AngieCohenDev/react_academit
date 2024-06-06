@@ -5,11 +5,16 @@ import { useFetchItems } from '../hooks/useFetchItems';
 
 export const Header = () => {
 
-  const { items} = useFetchItems()
+  const { items, isLoading } = useFetchItems()
   return (
     <header className=' flex place-content-between items-center mb-8'>
-      <img src={logo} alt="Logo" />
-      <Navbar items={items}/> 
+      {
+        isLoading
+        ? <img src={logo} alt="Logo" />
+        : <img src={items.logo} alt="Logo"/>
+       
+      }
+      <Navbar items={items} />
     </header>
   );
 };
