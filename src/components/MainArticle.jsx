@@ -4,15 +4,17 @@ import { useFetchMainArticles } from "../hooks/useFetchMainArticle";
 
 export const MainArticle = () => {
   const { mainArticle, isLoading } = useFetchMainArticles()
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <section className="mb-12">
       <picture>
-        <source media="(max-width: 640px)" srcSet={imagenMobile} />
-        <source media="(min-width: 641px)" srcSet={imagenDesktop} />
-        <img src={imagenMobile} alt="Articulo principal imagen" />
+        <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle[0]?.imageUrl} />
+        <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl} />
+        <img 
+          src={ isLoading ? imagenDesktop : mainArticle[0]?.imageUrl }
+          alt="Articulo principal imagen" />
       </picture>
       <div className="sm:flex">
         <div className="flex-1 py-6">

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import burgerMenu  from '../assets/images/icon-menu.svg'
 
 export const Navbar = ({items}) => {
