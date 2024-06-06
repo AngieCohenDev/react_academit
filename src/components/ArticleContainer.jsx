@@ -7,15 +7,28 @@ import { useFetchArticles } from "../hooks/useFetchArticles";
 
 export const ArticleContainer = () => {
   const { articles, isLoading} = useFetchArticles()
- /*if (isLoading) {
-    return <div>Loading...</div>;
-  }*/
+
   return (
     <section className="mt-10 md:flex md:flex-wrap md:gap-10">
       {
-        articles.map( (article) => (
-          <Article title={article.title} text={article.description} img={img2}/>
-        ))
+        isLoading
+          ? <>
+            <Article 
+              title={'Enseñanza totalmente en línea'} 
+              text={'Contamos que horarios flexibles para que se adapten a la disponibilidad del estudiante.'} 
+              img={img1} />
+            <Article 
+              title={'Asistencia individualizada'} 
+              text={'Nuestros profesionales están para resolver todas las dudas e inquietudes que surjan en tu camino educativo.'} 
+              img={img2} />
+            <Article 
+              title={'Apoyo financiero'} 
+              text={'Tenemos a tu disposición diversas opciones para que puedas financiar tu educación con nosotros.'} 
+              img={img3} />
+          </>
+          : articles.map((article) => (
+            <Article title={article.title} text={article.description} img={img2} />
+          ))
       }
       {/* <Article
         img={img1}
