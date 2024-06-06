@@ -3,10 +3,10 @@ import imagenDesktop from "../assets/images/foto.jpg";
 import { useFetchMainArticles } from "../hooks/useFetchMainArticle";
 
 export const MainArticle = () => {
-  const { mainArticle, isLoading } = useFetchMainArticles()
-  if (isLoading) {
+  const { mainArticle,  } = useFetchMainArticles()
+  /*if (isLoading) {
     return <div>Loading...</div>;
-  }
+  }*/
   return (
     <section className="mb-12">
       <picture>

@@ -7,7 +7,9 @@ import { useFetchArticles } from "../hooks/useFetchArticles";
 
 export const ArticleContainer = () => {
   const { articles, isLoading} = useFetchArticles()
-
+ /*if (isLoading) {
+    return <div>Loading...</div>;
+  }*/
   return (
     <section className="mt-10 md:flex md:flex-wrap md:gap-10">
       {
