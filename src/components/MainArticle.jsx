@@ -10,10 +10,10 @@ export const MainArticle = () => {
   return (
     <section className="mb-12">
       <picture>
-        <source media="(max-width: 640px)" srcSet={imagenMobile} />
-        <source media="(min-width: 641px)" srcSet={imagenDesktop} />
+        <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle[0]?.imageUrl} />
+        <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl} />
         <img 
-          src={ isLoading ? imagenMobile : mainArticle[0].image }
+          src={ isLoading ? imagenDesktop : mainArticle[0]?.imageUrl }
           alt="Articulo principal imagen" />
       </picture>
       <div className="sm:flex">
