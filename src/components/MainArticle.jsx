@@ -4,9 +4,6 @@ import { useFetchMainArticles } from "../hooks/useFetchMainArticle";
 
 export const MainArticle = () => {
   const { mainArticle, isLoading } = useFetchMainArticles()
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
   return (
     <section className="mb-12">
       <picture>
