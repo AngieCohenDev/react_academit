@@ -1,11 +1,9 @@
 import { VideoPlayer } from "../components/VideoPlayer"
 import {Header} from '../components/Header'
 import { MenuContainer } from "../components/MenuContainer"
-
 import video from '../assets/videos/prueba2.mp4'
 import { useState } from "react"
 import { useFetchCursos } from "../hooks/useFetchCursos"
-
 
 export const VideosPage = () => {
 

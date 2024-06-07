@@ -7,6 +7,7 @@ export const getCursos = async () => {
     const cursos = data.map((curso) => {
         const video = `${baseUrl}/${curso.video}`;  // Construct the full URL for the image
         return {
+            id: curso.id,
             title: curso.title,
             description: curso.description,
             video: video

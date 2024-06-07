@@ -7,6 +7,7 @@ export const getItems = async () => {
     const items = data.map((item) => {
         const imageUrl = `${baseUrl}/${item.logo}`;
         return {
+            id: item.id,
             item1: item.item1,
             item2: item.item2,
             item3: item.item3,

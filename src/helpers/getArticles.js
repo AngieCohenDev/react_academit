@@ -7,6 +7,7 @@ export const getArticles = async () => {
     const articles = data.map((article) => {
         const imageUrl = `${baseUrl}/${article.image}`;
         return {
+            id: article.id,
             title: article.title,
             description: article.description,
             imageUrl: imageUrl

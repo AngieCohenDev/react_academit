@@ -6,6 +6,7 @@ import { useFetchItems } from '../hooks/useFetchItems';
 export const Header = () => {
 
   const { items, isLoading } = useFetchItems()
+  console.log(items);
   return (
     <header className=' flex place-content-between items-center mb-8'>
       {
