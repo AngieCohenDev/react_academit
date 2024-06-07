@@ -1,10 +1,10 @@
 import { useState } from "react";  
 
 // eslint-disable-next-line react/prop-types
-export const MenuItems = ({title, description}) => {
+export const MenuItems = ({title, description, video, onFileVideo}) => {
   const [apertura, setApertura] = useState(false);
   return (
-    <div className="  text-OffWhite py-[28px] px-[20px]  border-b-2 border-gray-600 last:border-none" >
+    <div onClick={() => onFileVideo(video)} className="  text-OffWhite py-[28px] px-[20px]  border-b-2 border-gray-600 last:border-none" >
       <button
         className="flex justify-between w-full items-center"
         onClick={() => setApertura(!apertura)}
