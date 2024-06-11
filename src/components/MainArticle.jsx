@@ -9,17 +9,17 @@ export const MainArticle = () => {
       <picture>
         <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle[0]?.imageUrl} />
         <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl} />
-        <img 
-          src={ isLoading ? imagenDesktop : mainArticle[0]?.imageUrl }
-          alt="Articulo principal imagen" />
+        <img
+          src={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl}
+          alt="Articulo principal imagen" style={{ display: 'inline-block', width: '1460px', height: '350px' }} />
       </picture>
       <div className="sm:flex">
         <div className="flex-1 py-6">
           <h2 className="text-[40px] font-bold sm:text-[58px] leading-none ">
             {
-              isLoading
+              (isLoading)
                 ? '¡Aprende de programación con expertos!'
-                : mainArticle[0]?.title
+                : (mainArticle[0]?.title.length !== 0 ? mainArticle[0].title : '¡Aprende de programación con expertos!')
             }
           </h2>
         </div>
@@ -28,14 +28,14 @@ export const MainArticle = () => {
             {
               isLoading
                 ? 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.'
-                : mainArticle[0]?.description
+                : (mainArticle[0]?.description.length !== 0 ? mainArticle[0].description : 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.')
             }
           </p>
           <button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
             {
               isLoading
                 ? 'Inscribirse'
-                : mainArticle[0]?.textButton
+                : (mainArticle[0]?.textButton.length !== 0 ? mainArticle[0]?.textButton : 'Inscribirse')
             }
           </button>
         </div>

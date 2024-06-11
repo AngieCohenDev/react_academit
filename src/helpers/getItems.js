@@ -5,14 +5,10 @@ export const getItems = async () => {
     const data = await resp.json();
 
     const items = data.map((item) => {
-        const imageUrl = `${baseUrl}/${item.logo}`;
+        const logo = `${baseUrl}/${item.logo}`;
         return {
-            id: item.id,
-            item1: item.item1,
-            item2: item.item2,
-            item3: item.item3,
-            item4: item.item4,
-            logo: imageUrl
+            ...item,
+            logo
         }
 
     })

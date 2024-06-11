@@ -6,7 +6,7 @@ export const NewContainer = () => {
   const { newArticles, isLoading } = useFetchNewArticles()
   return (
     <aside className="bg-VeryDarkBlue text-OffWhite py-[28px] px-[20px] ">
-      <h1 className="text-SoftOrange text-4xl font-bold">Próximos cursos</h1>
+      <h1 className="text-SoftOrange text-4xl font-bold">{newArticles[0]?.sectiontitle}</h1>
       {
         isLoading
           ?

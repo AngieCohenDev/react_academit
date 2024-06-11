@@ -4,10 +4,7 @@ export const getNewArticle = async () => {
 
     const data = await resp.json();
     const newArticles = data.map( newArticle => ({
-        id: newArticle.id,
-        sectiontitle: newArticle.sectiontitle,
-        articletitle: newArticle.articletitle,
-        description: newArticle.description
+        ...newArticle
     }))
     console.log(newArticles);
     return newArticles;

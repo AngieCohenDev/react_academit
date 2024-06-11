@@ -30,21 +30,6 @@ export const ArticleContainer = () => {
             <Article title={article.title} text={article.description} img={article.imageUrl} />
           ))
       }
-      {/* <Article
-        img={img1}
-        title="Enseñanza totalmente en línea"
-        text="Contamos que horarios flexibles para que se adapten a la disponibilidad del estudiante."
-      />
-      <Article
-        img={img2}
-        title="Asistencia individualizada"
-        text="Nuestros profesionales están para resolver todas las dudas e inquietudes que surjan en tu camino educativo."
-      />
-      <Article
-        img={img3}
-        title="Apoyo financiero"
-        text="Tenemos a tu disposición diversas opciones para que puedas financiar tu educación con nosotros."
-      /> */}
     </section>
   );
 };
