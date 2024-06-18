@@ -13,5 +13,7 @@ export const getItems = async () => {
 
     })
 
+    items.reverse()
+
     return items[0];
 }

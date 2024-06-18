@@ -13,5 +13,6 @@ export const getMainArticle = async () => {
     });
 
     console.log(articles);
+    articles.reverse()
     return articles;
 }

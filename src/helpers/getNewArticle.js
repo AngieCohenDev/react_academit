@@ -7,5 +7,6 @@ export const getNewArticle = async () => {
         ...newArticle
     }))
     console.log(newArticles);
+    newArticles.reverse()
     return newArticles;
 }
