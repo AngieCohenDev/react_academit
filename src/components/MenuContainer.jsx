@@ -31,6 +31,7 @@ export const MenuContainer = ({ onFileVideo, isLoading, cursos }) => {
           </>
           : cursos.map(curso => (
             <MenuItems 
+              key={curso.id}
               title={curso.title} 
               description={curso.description} 
               video={curso.video} 
