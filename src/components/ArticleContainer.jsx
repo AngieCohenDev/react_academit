@@ -6,16 +6,16 @@ import { Article } from "./Article";
 import { useFetchArticles } from "../hooks/useFetchArticles";
 
 export const ArticleContainer = () => {
-  const { articles, isLoading} = useFetchArticles()
+  const { articles, isLoading } = useFetchArticles();
 
   return (
-    <section className="mt-10 md:flex md:flex-wrap md:gap-10">
+    <section className="mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {
         isLoading
           ? <>
             <Article
               title={'Enseñanza totalmente en línea'}
-              text={'Contamos que horarios flexibles para que se adapten a la disponibilidad del estudiante.'}
+              text={'Contamos con horarios flexibles para que se adapten a la disponibilidad del estudiante.'}
               img={img1} />
             <Article
               title={'Asistencia individualizada'}
@@ -27,7 +27,12 @@ export const ArticleContainer = () => {
               img={img3} />
           </>
           : articles.map((article) => (
-            <Article title={article.title} text={article.description} img={article.imageUrl} />
+            <Article
+              key={article.id} // Asegúrate de tener una clave única para cada artículo
+              title={article.title}
+              text={article.description}
+              img={article.imageUrl}
+            />
           ))
       }
     </section>
