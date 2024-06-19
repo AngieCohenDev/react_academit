@@ -13,6 +13,5 @@ export const getCursos = async () => {
     });
 
     console.log(cursos);
-    cursos.reverse()
     return cursos;
 }
