@@ -5,7 +5,7 @@ export const NewContainer = () => {
 
   const { newArticles, isLoading } = useFetchNewArticles()
   return (
-    <aside className="bg-VeryDarkBlue text-OffWhite py-[28px] px-[20px] ">
+    <aside className="bg-VeryDarkBlue text-OffWhite py-[28px] px-[20px] w-[30%]">
       <h1 className="text-SoftOrange text-4xl font-bold">{newArticles[0]?.sectiontitle}</h1>
       {
         isLoading
@@ -22,7 +22,7 @@ export const NewContainer = () => {
               text={'Amplía tus oportunidades laborales al convertirte en un experto a nivel Front-end y Back-end. ¡Obtén habilidades excepcionales!  '} />
           </>
           : newArticles.map((article) => (
-            <NewArticle title={article.articletitle} text={article.description} />
+            <NewArticle key={article.id} title={article.articletitle} text={article.description} />
           ))
       }
     </aside>
