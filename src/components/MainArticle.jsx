@@ -5,7 +5,7 @@ import { useFetchMainArticles } from "../hooks/useFetchMainArticle";
 export const MainArticle = () => {
   const { mainArticle, isLoading } = useFetchMainArticles()
   return (
-    <section className="mb-12">
+    <section className="mb-12 w-[70%]">
       <picture>
         <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle[0]?.imageUrl} />
         <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl} />
