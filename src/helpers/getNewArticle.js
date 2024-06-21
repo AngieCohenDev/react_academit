@@ -1,11 +1,10 @@
 export const getNewArticle = async () => {
     const url = `http://localhost:8080/new-article`
-    const resp = await fetch( url );
+    const respAll = await fetch( url );
+    const { pagination } = await respAll.json();
 
-    const {data} = await resp.json();
-    // const newArticles = data.map( newArticle => ({
-    //     ...newArticle
-    // }))
+    const resp = await fetch( `${url}?limit=${pagination.totalItems}` );
+    const { data } = await resp.json();
 
     console.log(data);
     data.reverse()

@@ -1,10 +1,13 @@
 export const getMainArticle = async () => {
     const baseUrl = 'http://localhost:8080';  // Define the base URL of your server
-    const url = `${baseUrl}/main-article/`;
-    const resp = await fetch(url);
-    const {data} = await resp.json();
+    const url = `${baseUrl}/main-article?limit=${1}`;
+    const respAll = await fetch(url);
+    const { pagination } = await respAll.json();
 
-    const articles = data.map((article) => {
+    const resp = await fetch(`${url}&page=${pagination.pageCount}`);
+    const { data } = await resp.json();
+
+    const mainArticles = data.map((article) => {
         const imageUrl = `${baseUrl}/${article.image}`;  // Construct the full URL for the image
         return {
             ...article,
@@ -12,7 +15,5 @@ export const getMainArticle = async () => {
         }
     });
 
-    console.log(articles);
-    articles.reverse()
-    return articles;
+    return mainArticles[0];
 }

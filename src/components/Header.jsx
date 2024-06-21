@@ -1,6 +1,6 @@
 import { Navbar } from './Navbar';
 
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/Academit.png'
 import { useFetchItems } from '../hooks/useFetchItems';
 
 export const Header = () => {
@@ -12,7 +12,7 @@ export const Header = () => {
     <header className=' flex place-content-between items-center mb-8'>
       {
         isLoading
-        ? <img src={logo} alt="Logo" />
+        ? <img src={logo} alt="Logo" style={{display: 'inline-block', width: '100px'}} />
         : <img src={items.logo} alt="Logo" style={{display: 'inline-block', width: '100px'}} />
        
       }
