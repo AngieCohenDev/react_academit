@@ -13,7 +13,7 @@ export const MainArticle = () => {
         <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle?.imageUrl} />
         <img
           src={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl}
-          alt="Articulo principal imagen" style={{ display: 'inline-block', width: '1460px', height: '350px' }} />
+          alt="Articulo principal imagen" style={{ display: 'inline-block', height: "420px", width: "100%", borderRadius: "5px" }} />
       </picture>
       <div className="sm:flex">
         <div className="flex-1 py-6">
