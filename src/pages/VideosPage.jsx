@@ -29,8 +29,9 @@ export const VideosPage = () => {
         <VideoPlayer src={videoUrl} />
 
         <MenuContainer
+          title={'Curso de JavaScript'}
           onFileVideo={handleFileVideo}
-          cursos={cursos}
+          videos={cursos}
           isLoading={isLoading} />
       </div>
     </main>
