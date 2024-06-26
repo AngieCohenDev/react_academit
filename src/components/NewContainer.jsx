@@ -22,7 +22,7 @@ export const NewContainer = () => {
               text={'Amplía tus oportunidades laborales al convertirte en un experto a nivel Front-end y Back-end. ¡Obtén habilidades excepcionales!  '} />
           </>
           : newArticles.map((article) => (
-            <NewArticle key={article.id} title={article.articletitle} text={article.description} />
+            <NewArticle key={article.id} title={article.articletitle} text={article.description} link={article.NavegacionArticleTitle} />
           ))
       }
     </aside>
