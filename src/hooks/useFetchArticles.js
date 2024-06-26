@@ -2,14 +2,20 @@ import { useEffect, useState } from "react";
 import { getArticles } from "../helpers/getArticles";
 
 export const useFetchArticles = () => {
-    
+
     const [articles, setArticle] = useState([])
+    const [error, setError] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
 
     const getArticle = async () => {
-        const newArticle = await getArticles();
-        setArticle(newArticle);
-        setIsLoading(false)
+        try {
+            const newArticle = await getArticles();
+            setArticle(newArticle);
+            setIsLoading(false)
+        } catch (error) {
+            setError(true)
+            throw Error(error)
+        }
     }
 
     useEffect(() => {
@@ -18,6 +24,7 @@ export const useFetchArticles = () => {
 
     return {
         articles,
+        error,
         isLoading
     }
 }

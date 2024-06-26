@@ -6,12 +6,12 @@ import { Article } from "./Article";
 import { useFetchArticles } from "../hooks/useFetchArticles";
 
 export const ArticleContainer = () => {
-  const { articles, isLoading } = useFetchArticles();
+  const { articles, error, isLoading } = useFetchArticles();
 
   return (
     <section className="mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {
-        isLoading
+        error
           ? <>
             <Article
               title={'Enseñanza totalmente en línea'}
