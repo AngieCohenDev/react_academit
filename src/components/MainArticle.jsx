@@ -33,13 +33,14 @@ export const MainArticle = () => {
                 : (mainArticle?.description.length !== 0 ? mainArticle.description : 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.')
             }
           </p>
-          <button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
+          <a href={isLoading ? "/" : mainArticle?.NavegacionBoton}><button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
             {
               isLoading
                 ? 'Inscribirse'
                 : (mainArticle?.textButton.length !== 0 ? mainArticle?.textButton : 'Inscribirse')
             }
           </button>
+          </a>
         </div>
       </div>
     </section>
