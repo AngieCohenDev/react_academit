@@ -1,32 +1,34 @@
-import { Article } from "../components/Article";
-import { useFetchCursos } from "../hooks/useFetchCursos";
-
-import img1 from "../assets/images/inicio_foto_img.jpg";
-import img2 from "../assets/images/img2.jpg";
-import img3 from "../assets/images/img3.jpg";
-import { useState } from "react";
 import { Header } from "../components/Header";
+import { Curso } from "../components/Curso";
+
+import img1 from "../assets/images/js.png";
+import img2 from "../assets/images/gitygithub.png";
+import img3 from "../assets/images/csharp.png";
 
 export const CursosPage = () => {
-    const { cursos, isLoading } = useFetchCursos();
-    const [cursoss, setCursos] = useState([])
 
     return (
         <main className="px-8 pt-10">
             <Header />
             <div className="mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <Article
-                    title={'Enseñanza totalmente en línea'}
-                    text={'Contamos con horarios flexibles para que se adapten a la disponibilidad del estudiante.'}
-                    img={img1} />
-                <Article
-                    title={'Asistencia individualizada'}
-                    text={'Nuestros profesionales están para resolver todas las dudas e inquietudes que surjan en tu camino educativo.'}
-                    img={img2} />
-                <Article
-                    title={'Apoyo financiero'}
-                    text={'Tenemos a tu disposición diversas opciones para que puedas financiar tu educación con nosotros.'}
-                    img={img3} />
+                <Curso
+                    key={1}
+                    title={'JavaScript de 0 a Experto'}
+                    text={'Curso de JavaScript desde las bases hasta ser un experto.'}
+                    image={img1}
+                    link={'/video'} />  
+                <Curso
+                    key={2}
+                    title={'Git y GitHub para principiantes'}
+                    text={'Curso de Git y GitHub desde las bases.'}
+                    image={img2}
+                    link={'#'} />
+                <Curso
+                    key={3}
+                    title={'C# Curso de 0 a Experto'}
+                    text={'Curso de C# desde las bases hasta ser un experto.'}
+                    image={img3}
+                    link={'#'} />
             </div>
         </main>
     )
