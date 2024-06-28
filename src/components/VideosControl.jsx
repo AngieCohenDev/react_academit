@@ -19,7 +19,6 @@ export const VideosControl = ({
   isPlaying,
   volume,
   playbackRate,
-  isFullscreen,
   togglePlay,
   handleVolumenChange,
   handlePlaybackrateChange,
