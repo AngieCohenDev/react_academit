@@ -6,8 +6,8 @@ import { NewContainer } from "../components/NewContainer";
 export const LandingPage = () => {
   return (
     <>
-      <Header />
       <main className="px-8">
+      <Header />
         <div className="lg:flex lg:gap-8 ">
           <MainArticle />
           <NewContainer />
