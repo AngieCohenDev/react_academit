@@ -4,6 +4,7 @@ import { getItems } from "../helpers/getItems";
 export const useFetchItems = () => {
     
     const [items, setItems] = useState([])
+    
     const [isLoading, setIsLoading] = useState(true)
 
     const getItem = async () => {

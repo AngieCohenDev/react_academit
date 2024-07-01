@@ -3,26 +3,25 @@ import imagenDesktop from "../assets/images/foto.jpg";
 import { useFetchMainArticles } from "../hooks/useFetchMainArticle";
 
 export const MainArticle = () => {
+
   const { mainArticle, isLoading } = useFetchMainArticles()
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+
   return (
-    <section className="mb-12">
+    <section className="mb-12 w-[70%]">
       <picture>
-        <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle[0]?.imageUrl} />
-        <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl} />
-        <img 
-          src={ isLoading ? imagenDesktop : mainArticle[0]?.imageUrl }
-          alt="Articulo principal imagen" />
+        <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle?.imageUrl} />
+        <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle?.imageUrl} />
+        <img
+          src={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl}
+          alt="Articulo principal imagen" style={{ display: 'inline-block', height: "420px", width: "100%", borderRadius: "5px" }} />
       </picture>
       <div className="sm:flex">
         <div className="flex-1 py-6">
           <h2 className="text-[40px] font-bold sm:text-[58px] leading-none ">
             {
-              isLoading
+              (isLoading)
                 ? '¡Aprende de programación con expertos!'
-                : mainArticle[0]?.title
+                : (mainArticle?.title.length !== 0 ? mainArticle.title : '¡Aprende de programación con expertos!')
             }
           </h2>
         </div>
@@ -31,16 +30,17 @@ export const MainArticle = () => {
             {
               isLoading
                 ? 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.'
-                : mainArticle[0]?.description
+                : (mainArticle?.description.length !== 0 ? mainArticle.description : 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.')
             }
           </p>
-          <button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
+          <a href={isLoading ? "/" : mainArticle?.NavegacionBoton}><button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
             {
               isLoading
                 ? 'Inscribirse'
-                : mainArticle[0]?.textButton
+                : (mainArticle?.textButton.length !== 0 ? mainArticle?.textButton : 'Inscribirse')
             }
           </button>
+          </a>
         </div>
       </div>
     </section>

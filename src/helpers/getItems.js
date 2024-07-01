@@ -1,14 +1,20 @@
 export const getItems = async () => {
-    const url = `http://localhost:8080/headers`
-    const resp = await fetch( url );
+    const baseUrl = 'http://localhost:8080';  // Define the base URL of your server
+    const url = `${baseUrl}/headers?limit=${1}`;
+    const respAll = await fetch(url);
+    const { pagination } = await respAll.json();
 
-    const data = await resp.json();
-    const items = data.map( item => ({
-        item1: item.item1,
-        item2: item.item2,
-        item3: item.item3,
-        item4: item.item4
-    }))
+    const resp = await fetch(`${url}&page=${pagination.pageCount}`);
+    const { data } = await resp.json();
+
+    const items = data.map((item) => {
+        const logo = `${baseUrl}/${item.logo}`;
+        return {
+            ...item,
+            logo
+        }
+
+    })
 
     return items[0];
 }
