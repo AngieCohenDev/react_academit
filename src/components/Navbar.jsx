@@ -15,7 +15,7 @@ export const Navbar = ({items}) => {
         <a href={items?.NavegacionItem03}>{items.item03 ? items.item03 : 'Sobre nosotros'}</a>
       </li>
       <li>
-        <a href={items?.NavegacionItem04}>{items.item04 ? items.item04 : 'Características'}</a>
+        <a href={items?.NavegacionItem04}>{items.item04 ? items.item04 : 'Contacto'}</a>
       </li>
     </ul>
     <img className='w-10 h-4 cursor-pointer sm:hidden' src={burgerMenu} alt="Menu hamburguesa" />

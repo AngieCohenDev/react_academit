@@ -4,7 +4,9 @@ export const PageNotFoud404 = () => {
   return (
     <>
       <div className="h-screen font-sans flex flex-col">
-        <Header />
+        <div className='px-8'>
+          <Header />
+        </div>
         <div className="bg-white flex items-center justify-center flex-grow text-customGray ">
           <h1 className="text-[180px] font-oswald">404</h1>
         </div>
