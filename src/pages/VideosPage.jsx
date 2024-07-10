@@ -3,23 +3,30 @@ import { Header } from '../components/Header'
 import { MenuContainer } from "../components/MenuContainer"
 import video from '../assets/videos/prueba2.mp4'
 import { useEffect, useState } from "react"
-import { useFetchCursos } from "../hooks/useFetchCursos"
+import { useFetchVideos } from "../hooks/useFetchCursos"
+import { useLocation, useNavigate } from "react-router-dom"
 
 export const VideosPage = () => {
 
-  const { cursos, isLoading } = useFetchCursos();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { state } = location;
+  console.log(state);
+  !state && navigate('/cursos') 
+
+  const { videos, isLoading } = useFetchVideos(state.id);
   const [videoUrl, setVideoUrl] = useState(video)
 
-  let curso;
-  cursos ? curso = cursos[0]?.video : curso = video
+  let vide;
+  videos ? vide = videos[0]?.pathDelVideo : vide = video
 
   const handleFileVideo = (video) => {
     setVideoUrl(video)
   }
 
   useEffect(() => {
-    handleFileVideo(curso)
-  }, [cursos])
+    handleFileVideo(vide)
+  }, [vide])
 
   return (
     <main className="px-8 pt-10">
@@ -29,9 +36,9 @@ export const VideosPage = () => {
         <VideoPlayer src={videoUrl} />
 
         <MenuContainer
-          title={'Curso de JavaScript'}
+          title={state.title}
           onFileVideo={handleFileVideo}
-          videos={cursos}
+          videos={videos}
           isLoading={isLoading} />
       </div>
     </main>

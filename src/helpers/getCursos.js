@@ -8,13 +8,28 @@ export const getCursos = async () => {
     const { data } = await resp.json();
 
     const cursos = data.map((curso) => {
-        const video = `${baseUrl}/${curso.video}`;  // Construct the full URL for the image
+        const fotografiaDelCurso = `${baseUrl}/${curso.fotografiaDelCurso}`;  // Construct the full URL for the image
         return {
             ...curso,
-            video
+            fotografiaDelCurso
         }
     });
-
-    console.log(cursos);
     return cursos;
 }
+
+// export const getCurso = async (id) => {
+//     const baseUrl = 'http://localhost:8080';  // Define the base URL of your server
+//     const url = `${baseUrl}/cursos/${id}`;
+//     const resp = await fetch(url);
+
+//     const dato = await resp.json();
+//     const fotografiaDelCurso = `${baseUrl}/${dato.fotografiaDelCurso}`;
+
+
+//     const curso = {
+//         ...dato,
+//         fotografiaDelCurso,
+//     }
+
+//     return curso;
+// }

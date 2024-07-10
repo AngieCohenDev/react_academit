@@ -31,10 +31,10 @@ export const MenuContainer = ({ title, onFileVideo, isLoading, videos }) => {
             </>
             : videos.map(video => (
               <MenuItems
-                key={video.id}
-                title={video.title}
-                description={video.description}
-                video={video.video}
+                key={video.idVideo}
+                title={video.tituloVideo}
+                description={video.descripcion}
+                video={video.pathDelVideo}
                 onFileVideo={onFileVideo} />
             ))
         }
