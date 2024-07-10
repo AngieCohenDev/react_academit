@@ -1,13 +1,17 @@
-import { Header } from '../components/Header'
+import { Header } from '../components/Header';
+import { AboutUs } from '../components/AboutUs';
+
 
 export const AboutPage = () => {
     return (
         <>
-            <Header />
-            <div>
-                <p>Pagina para Hablar sobre academit</p>
-            </div>
-        </>
+            <main className='px-8'>
+                <Header />
+                <div>
+                    <AboutUs />
+                </div>
+            </main>
 
+        </>
     )
 }

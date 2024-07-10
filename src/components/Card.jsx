@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
-export const Card = ({ title, text, image, link, tags }) => {
+export const Card = ({ title, text, image, tags}) => {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <a href={link}> <img className="w-full" src={image} alt="Sunset in the mountains" />
+            <a> <img className="w-full" src={image} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{title}</div>
                     <p className="text-gray-700 text-base">
