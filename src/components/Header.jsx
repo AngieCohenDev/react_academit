@@ -12,7 +12,7 @@ export const Header = () => {
       {
         isLoading
         ? <a href="/" ><img src={logo} alt="Logo" style={{display: 'inline-block', width: '100px', cursor: 'pointer'}} /></a>
-        : <a href="/" ><img src={items.logo} alt="Logo" style={{display: 'inline-block', width: '100px', cursor: 'pointer'}} /></a>
+        : <a href="/" ><img src={items.rutaLogo} alt="Logo" style={{display: 'inline-block', width: '100px', cursor: 'pointer'}} /></a>
        
       }
       <Navbar items={items} />

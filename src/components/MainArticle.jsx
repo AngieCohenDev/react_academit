@@ -9,10 +9,10 @@ export const MainArticle = () => {
   return (
     <section className="mb-12 w-[70%]">
       <picture>
-        <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle?.imageUrl} />
-        <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle?.imageUrl} />
+        <source media="(max-width: 640px)" srcSet={isLoading ? imagenMobile : mainArticle.rutaImagen} />
+        <source media="(min-width: 641px)" srcSet={isLoading ? imagenDesktop : mainArticle.rutaImagen} />
         <img
-          src={isLoading ? imagenDesktop : mainArticle[0]?.imageUrl}
+          src={isLoading ? imagenDesktop : mainArticle?.rutaImagen}
           alt="Articulo principal imagen" style={{ display: 'inline-block', height: "420px", width: "100%", borderRadius: "5px" }} />
       </picture>
       <div className="sm:flex">
@@ -21,7 +21,7 @@ export const MainArticle = () => {
             {
               (isLoading)
                 ? '¡Aprende de programación con expertos!'
-                : (mainArticle?.title.length !== 0 ? mainArticle.title : '¡Aprende de programación con expertos!')
+                : (mainArticle?.titulo.length !== 0 ? mainArticle.titulo : '¡Aprende de programación con expertos!')
             }
           </h2>
         </div>
@@ -30,14 +30,14 @@ export const MainArticle = () => {
             {
               isLoading
                 ? 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.'
-                : (mainArticle?.description.length !== 0 ? mainArticle.description : 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.')
+                : (mainArticle?.descripcion.length !== 0 ? mainArticle.descripcion : 'Nos comprometemos a fomentar el crecimiento y la excelencia de aquellos que confían en nosotros, contribuyendo así al éxito de nuestros estudiantes.')
             }
           </p>
-          <a href={isLoading ? "/" : mainArticle?.NavegacionBoton}><button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
+          <a href={isLoading ? "/" : mainArticle?.navegacionBoton}><button className="bg-SoftRed w-[185px] h-[48px] uppercase text-OffWhite hover:bg-VeryDarkBlue">
             {
               isLoading
                 ? 'Inscribirse'
-                : (mainArticle?.textButton.length !== 0 ? mainArticle?.textButton : 'Inscribirse')
+                : (mainArticle?.textoBoton.length !== 0 ? mainArticle?.textoBoton : 'Inscribirse')
             }
           </button>
           </a>

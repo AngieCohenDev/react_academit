@@ -8,10 +8,10 @@ export const getArticles = async () => {
     const { data } = await resp.json();
 
     const articles = data.map((article) => {
-        const imageUrl = `${baseUrl}/${article.image}`;
+        const rutaImagen = `${baseUrl}/${article.rutaImagen}`;
         return {
             ...article,
-            imageUrl
+            rutaImagen
         }
 
     })

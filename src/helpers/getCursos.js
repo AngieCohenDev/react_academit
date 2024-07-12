@@ -8,10 +8,10 @@ export const getCursos = async () => {
     const { data } = await resp.json();
 
     const cursos = data.map((curso) => {
-        const fotografiaDelCurso = `${baseUrl}/${curso.fotografiaDelCurso}`;  // Construct the full URL for the image
+        const rutaFotografiaCurso = `${baseUrl}/${curso.rutaFotografiaCurso}`;  // Construct the full URL for the image
         return {
             ...curso,
-            fotografiaDelCurso
+            rutaFotografiaCurso
         }
     });
     return cursos;

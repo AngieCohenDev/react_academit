@@ -8,10 +8,10 @@ export const getItems = async () => {
     const { data } = await resp.json();
 
     const items = data.map((item) => {
-        const logo = `${baseUrl}/${item.logo}`;
+        const rutaLogo = `${baseUrl}/${item.rutaLogo}`;
         return {
             ...item,
-            logo
+            rutaLogo
         }
 
     })
