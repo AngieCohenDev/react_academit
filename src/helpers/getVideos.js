@@ -6,13 +6,11 @@ export const getVideos = async (idCurso) => {
     const videos = await resp.json();
 
     videos.map((video) => {
-        const pathDelVideo = `${baseUrl}/${video.pathDelVideo}`;
-        const miniatura = `${baseUrl}/${video.miniatura}`;
-        video.pathDelVideo = pathDelVideo
-        video.miniatura = miniatura
+        const rutaVideo = `${baseUrl}/${video.rutaVideo}`;
+        const rutaMiniatura = `${baseUrl}/${video.rutaMiniatura}`;
+        video.rutaVideo = rutaVideo
+        video.rutaMiniatura = rutaMiniatura
     })
-
-    console.log(videos);
 
     return videos;
 }

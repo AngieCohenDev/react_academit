@@ -1,9 +1,6 @@
 import { Header } from "../components/Header";
 import { Card } from "../components/Card";
 
-import img1 from "../assets/images/js.png";
-import img2 from "../assets/images/gitygithub.png";
-import img3 from "../assets/images/csharp.png";
 import { useFetchCursos } from "../hooks/useFetchCursos";
 
 export const CursosPage = () => {
@@ -21,7 +18,7 @@ export const CursosPage = () => {
                             id={curso.idCurso}
                             title={curso.nombreCurso}
                             text={curso.descripcionCurso}
-                            image={curso.fotografiaDelCurso}
+                            image={curso.rutaFotografiaCurso}
                             tags={[`${curso.nivel}`, `${curso.categoria}`]}
                         />
                     ))

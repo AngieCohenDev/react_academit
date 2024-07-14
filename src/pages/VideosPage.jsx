@@ -18,7 +18,7 @@ export const VideosPage = () => {
   const [videoUrl, setVideoUrl] = useState(video)
 
   let vide;
-  videos ? vide = videos[0]?.pathDelVideo : vide = video
+  videos ? vide = videos[0]?.rutaVideo : vide = video
 
   const handleFileVideo = (video) => {
     setVideoUrl(video)

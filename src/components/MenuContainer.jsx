@@ -34,7 +34,7 @@ export const MenuContainer = ({ title, onFileVideo, isLoading, videos }) => {
                 key={video.idVideo}
                 title={video.tituloVideo}
                 description={video.descripcion}
-                video={video.pathDelVideo}
+                video={video.rutaVideo}
                 materiales={video.materiales}
                 onFileVideo={onFileVideo} />
             ))

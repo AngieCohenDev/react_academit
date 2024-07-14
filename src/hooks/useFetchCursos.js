@@ -29,8 +29,8 @@ export const useFetchVideos = (idCurso) => {
     const [isLoading, setIsLoading] = useState(true)
 
     const getOneCurso = async () => {
-        const curso = await getVideos(idCurso);
-        setVideos(curso);
+        const videoDelCurso = await getVideos(idCurso);
+        setVideos(videoDelCurso);
         setIsLoading(false)
     }
 
