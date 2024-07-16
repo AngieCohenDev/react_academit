@@ -32,10 +32,10 @@ export const ArticleContainer = () => {
           : articles.map((article) => (
             <Article
               key={article.id} // Asegúrate de tener una clave única para cada artículo
-              title={article.title}
-              text={article.description}
-              img={article.imageUrl}
-              link={article.NavegacionTitle}
+              title={article.titulo}
+              text={article.descripcion}
+              img={article.rutaImagen}
+              link={article.navegacionTitulo}
             />
           ))
       }
