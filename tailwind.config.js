@@ -10,6 +10,15 @@ export default {
         "GrayishBlue": "hsl(233, 8%, 79%)",
         "DarkGrayishBlue": "hsl(236, 13%, 42%)",
         "VeryDarkBlue": "hsl(240, 100%, 5%)",
+        "customGray": '#dbdbdb',
+        "customGrayDark": '#686868'
+      },
+      fontFamily: {
+        oswald: ['Oswald', 'sans-serif'],
+      },
+      width: {
+        '7/10': '70%',
+        '3/10': '30%',
       },
     },
   },
