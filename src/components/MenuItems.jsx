@@ -42,7 +42,7 @@ export const MenuItems = ({ title, description, video, onFileVideo, materiales }
          {description}
           {
             materiales?.map((material) => (
-            <a href={`http://localhost:8080/${material.rutaMaterial}`}><button className=" border-2 rounded rounded-lg px-4 item-center mt-9 hover:bg-SoftOrange w-[13s0px] h-[30px]">Ver</button></a>
+            <a href={`http://localhost:8080/${material.rutaMaterial}`} target="_blank"><button className=" border-2 rounded rounded-lg px-4 item-center mt-9 hover:bg-SoftOrange w-[13s0px] h-[30px]">Ver</button></a>
             ))
           }
         </div>

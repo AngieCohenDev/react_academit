@@ -11,10 +11,14 @@ export const VideosPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { state } = location;
-  console.log(state);
-  !state && navigate('/cursos') 
 
-  const { videos, isLoading } = useFetchVideos(state.id);
+  if (!state) {
+    useEffect(() => {
+      navigate('/cursos');
+    }, [])
+  }
+
+  const { videos, isLoading } = useFetchVideos(state?.id);
   const [videoUrl, setVideoUrl] = useState(video)
 
   let vide;
@@ -36,7 +40,7 @@ export const VideosPage = () => {
         <VideoPlayer src={videoUrl} />
 
         <MenuContainer
-          title={state.title}
+          title={state?.title}
           onFileVideo={handleFileVideo}
           videos={videos}
           isLoading={isLoading} />
